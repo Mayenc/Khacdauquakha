@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khắc Dấu Ấn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+     body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+    .top-banner {
+      background-color: #a30000;
+      color: white;
+      font-size: 14px;
+    }
+    .navbar-brand strong {
+      color: #006e43;
+    }
+    /* .contact-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 2rem;
+      background: #fff;
+    } */
+     .contact-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 2rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: #fff;
+        text-align: center;
+    }
+
+    .icon-circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin: 0 auto 1rem auto;
+    }
+
+    .contact-content {
+        flex-grow: 1;
+    }
+
+    .qr-code-box {
+        height: 120px;
+        background: #e2e8f0;
+        border-radius: 8px;
+        line-height: 120px;
+        color: #6b7280;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    .icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem auto;
+    }
+    .btn-dark {
+      background-color: #0f172a;
+      border: none;
+    }
+    .btn-dark:hover {
+      background-color: #1e293b;
+    }
+    .map-placeholder {
+      background-color: #e5e7eb;
+      width: 100%;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #006e43;
+      color: white;
+      padding: 40px 0 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-bottom {
+      background-color: #005437;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .alert-wrapper {
+      background-color: #fff4e6; /* đỏ nhạt hơn rõ hơn */
+      width: 100%;
+    }
+    .alert-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    </style>
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner text-center py-2">
+    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn Nha Trang - Hotline: 0123.456.789 | Miễn phí ship đơn hàng từ 300,000đ
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
+
+    <!-- Nút toggle khi màn hình nhỏ -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Các mục menu nằm trong div collapse -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact_page.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+   <header class="text-center py-5">
+    <h2>Liên Hệ Với Chúng Tôi</h2>
+    <p class="text-muted">Chúng tôi luôn sẵn sàng hỗ trợ bạn với các dịch vụ khắc dấu chuyên nghiệp. Hãy liên hệ ngay!</p>
+  </header>
+  <div class="container mb-5">
+    <div class="row g-4">
+        <!-- Điện thoại -->
+        <div class="col-md-4">
+        <div class="contact-card">
+            <div class="contact-content">
+            <div class="icon-circle">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <h6>Điện Thoại</h6>
+            <p class="text-muted small">Gọi ngay để được tư vấn miễn phí</p>
+            <p class="fs-5 fw-bold">0123-456-789</p>
+            </div>
+            <a href="tel:0123456789" class="btn btn-dark w-100 mt-3">Gọi Ngay</a>
+        </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-4">
+        <div class="contact-card">
+            <div class="contact-content">
+            <div class="icon-circle">
+                <i class="bi bi-envelope"></i>
+            </div>
+            <h6>Email</h6>
+            <p class="text-muted small">Gửi email để được hỗ trợ chi tiết</p>
+            <p class="fw-semibold">info@khacdauan.com</p>
+            </div>
+            <a href="mailto:info@khacdauan.com" class="btn btn-dark w-100 mt-3">Gửi Email</a>
+        </div>
+        </div>
+
+        <!-- Zalo -->
+        <div class="col-md-4">
+        <div class="contact-card">
+            <div class="contact-content">
+            <div class="icon-circle">
+                <i class="bi bi-chat-dots"></i>
+            </div>
+            <h6>Zalo</h6>
+            <p class="text-muted small">Quét mã QR để chat trực tiếp</p>
+            <div class="qr-code-box">QR Code Zalo</div>
+            </div>
+            <a href="#" class="btn btn-dark w-100 mt-3">Chat Zalo</a>
+        </div>
+        </div>
+    </div>
+    </div>
+  <!-- <div class="container mb-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="contact-card text-center h-100">
+          <div class="icon-circle">
+            <i class="bi bi-telephone"></i>
+          </div>
+          <h6>Điện Thoại</h6>
+          <p class="text-muted small">Gọi ngay để được tư vấn miễn phí</p>
+          <p class="fs-5 fw-bold">0123-456-789</p>
+          <a href="tel:0123456789" class="btn btn-dark w-100">Gọi Ngay</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card text-center h-100">
+          <div class="icon-circle">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <h6>Email</h6>
+          <p class="text-muted small">Gửi email để được hỗ trợ chi tiết</p>
+          <p class="fw-semibold">info@khacdauan.com</p>
+          <a href="mailto:info@khacdauan.com" class="btn btn-dark w-100">Gửi Email</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-card text-center h-100">
+          <div class="icon-circle">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <h6>Zalo</h6>
+          <p class="text-muted small">Quét mã QR để chat trực tiếp</p>
+          <div class="map-placeholder mb-3">QR Code Zalo</div>
+          <a href="#" class="btn btn-dark w-100">Chat Zalo</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container mb-5">
+    <h4 class="text-center mb-3">Gửi Tin Nhắn</h4>
+    <p class="text-center text-muted">Điền thông tin bên dưới và chúng tôi sẽ liên hệ trong 24h</p>
+    <form class="contact-card mx-auto" style="max-width: 700px;">
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Họ và tên *" required>
+        </div>
+        <div class="col-md-6">
+          <input type="tel" class="form-control" placeholder="Số điện thoại *" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="mb-3">
+        <select class="form-select">
+          <option selected disabled>Chọn dịch vụ</option>
+          <option>Khắc Gỗ</option>
+          <option>Khắc Kim Loại</option>
+          <option>Khắc Quà Tặng</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Mô tả chi tiết yêu cầu của bạn..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark w-100"><i class="bi bi-send"></i> Gửi Tin Nhắn</button>
+    </form>
+  </div>
+
+  <div class="container mb-5">
+    <h4 class="text-center mb-3">Địa Chỉ Cửa Hàng</h4>
+    <p class="text-center text-muted">Ghé thăm cửa hàng để xem trực tiếp các sản phẩm mẫu</p>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="contact-card h-100">
+          <h6>Thông Tin Liên Hệ</h6>
+          <p><strong>Địa chỉ:</strong><br>123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
+          <p><strong>Giờ làm việc:</strong><br>Thứ 2 - Thứ 7: 8:00 - 18:00<br>Chủ nhật: 9:00 - 17:00</p>
+          <p><strong>Hotline:</strong><br>0123-456-789</p>
+          <p><strong>Email:</strong><br>info@khacdauan.com</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="map-placeholder">Google Maps Embed</div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h3><b>Khắc Dấu Ấn</b></h3>
+          <p class="small">Chuyên cung cấp dịch vụ khắc dấu chuyên nghiệp với chất lượng cao và giá cả hợp lý.</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Dịch Vụ</h6>
+          <ul class="list-unstyled small">
+            <li>Khắc Gỗ</li>
+            <li>Khắc Kim Loại</li>
+            <li>Khắc Quà Tặng</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Hỗ Trợ</h6>
+          <ul class="list-unstyled small">
+            <li>Chính Sách Bảo Hành</li>
+            <li>Chính Sách giao hàng</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Liên Hệ</h6>
+          <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>123 Đường ABC, Nha Trang</p>
+          <p class="small mb-1"><i class="fa fa-phone me-2"></i>0123.456.789</p>
+          <p class="small mb-1"><i class="fa fa-envelope me-2"></i>contact@khacdau.vn</p>
+          <p class="small mb-1"><i class="fab fa-facebook me-2"></i>fb.com/khacdau.official</p>
+          <p class="small mb-1"><i class="fas fa-comment-dots me-2"></i>Zalo: 0123.456.789</p>
+        </div>
+      </div>
+      <div class="text-center pt-4 small">&copy; 2025 Khắc Dấu Ấn. Tất cả quyền được bảo lưu.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

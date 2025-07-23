@@ -1,0 +1,313 @@
+<!-- File: detail_page_updated.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bảng Tên Gỗ Theo Yêu Cầu</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .top-banner {
+      background-color: #a30000;
+      color: white;
+      font-size: 14px;
+    }
+    .navbar-brand strong {
+      color: #006e43;
+    }
+    .rating-stars {
+      color: #ffc107;
+      font-size: 1.2rem;
+    }
+    .product-image {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .thumb-image {
+      height: 60px;
+      margin-right: 5px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact-box {
+      background: #f8f8f8;
+      padding: 16px;
+      border-radius: 8px;
+    }
+    .btn-warning {
+      background-color: #d98c38;
+      border: none;
+    }
+    .btn-warning:hover {
+      background-color: #c6782e;
+    }
+    .btn-dark {
+      background-color: #844c14;
+      border: none;
+    }
+    .btn-dark:hover {
+      background-color: #693a10;
+    }
+    .article-thumb {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    footer {
+      background-color: #006e43;
+      color: white;
+      padding: 40px 0 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-bottom {
+      background-color: #005437;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="top-banner text-center py-2">
+    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn Hà Nội - Hotline: 0123.456.789 | Miễn phí ship đơn hàng từ 300,000đ
+  </div>
+
+  <!-- Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
+
+    <!-- Nút toggle khi màn hình nhỏ -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Các mục menu nằm trong div collapse -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index_page.html">Trang chủ</a></li>
+        <li class="nav-item"><a class="nav-link" href="service_page.html">Dịch vụ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <!-- Bài viết mới -->
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">Bài Viết Mới</h5>
+        <div class="mb-3 d-flex">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/default-placeholder.png" class="article-thumb me-2">
+          <div>
+            <div class="small fw-bold">Cách Bảo Quản Đồ Gỗ Khắc</div>
+            <div class="small text-muted">15/06/2023</div>
+          </div>
+        </div>
+        <div class="mb-3 d-flex">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/default-placeholder.png" class="article-thumb me-2">
+          <div>
+            <div class="small fw-bold">5 Món Quà Cá Nhân Hóa</div>
+            <div class="small text-muted">28/05/2023</div>
+          </div>
+        </div>
+        <div class="mb-3 d-flex">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/default-placeholder.png" class="article-thumb me-2">
+          <div>
+            <div class="small fw-bold">Kỹ Thuật Khắc Laser</div>
+            <div class="small text-muted">12/05/2023</div>
+          </div>
+        </div>
+        <div class="mb-3 d-flex">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/default-placeholder.png" class="article-thumb me-2">
+          <div>
+            <div class="small fw-bold">Biển Hiệu Doanh Nghiệp</div>
+            <div class="small text-muted">30/04/2023</div>
+          </div>
+        </div>
+        <hr>
+        <h5 class="fw-bold mt-4">Danh Mục Dịch Vụ</h5>
+        <ul class="list-unstyled ms-2">
+          <li>🔸 Khắc Gỗ</li>
+          <li>🔸 Khắc Kim Loại</li>
+          <li>🔸 Khắc Da</li>
+          <li>🔸 Khắc Thủy Tinh</li>
+          <li>🔸 Khắc Quà Tặng</li>
+          <li>🔸 Quà Tặng Doanh Nghiệp</li>
+          <li>🔸 Quà Cưới & Kỷ Niệm</li>
+        </ul>
+
+      </div>
+
+      <!-- Chi tiết sản phẩm -->
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/827c3558ca-5901c809b896960ec546.png" alt="Ảnh chính" class="product-image mb-3">
+            <div class="d-flex">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b1776b6e8f-72c2973ecc5efeec2590.png" class="thumb-image">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6842a18000-817fc3bd2beef3f0d651.png" class="thumb-image">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3f95cbec72-3f597486e64a1959f137.png" class="thumb-image">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b282d2a673-3fb6cccaebe7ac24c179.png" class="thumb-image">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="fw-bold">Bảng Tên Gỗ Theo Yêu Cầu</h3>
+            <div class="d-flex align-items-center mb-2">
+              <div class="rating-stars">★★★★★</div>
+              <small class="ms-2 text-muted">(24 đánh giá)</small>
+            </div>
+            <p><strong>Mã sản phẩm:</strong> WE-NS-001</p>
+            <p><strong>Phân loại:</strong> Khắc Gỗ</p>
+            <p><strong>Tình trạng:</strong> <span class="text-success">Còn hàng</span></p>
+            <p><strong>Thời gian:</strong> 3–5 ngày làm việc</p>
+
+            <div class="contact-box">
+              <h6><strong>Thông Tin Liên Hệ</strong></h6>
+              <p>📞 0123-456-789</p>
+              <p>✉️ info@khacdauan.com</p>
+              <p>💬 @khacdauan</p>
+              <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-dark w-50">📞 Gọi Ngay</button>
+                <button class="btn btn-outline-dark w-50">✉️ Gửi Email</button>
+              </div>
+            </div>
+
+            <button class="btn btn-warning w-100 mt-3">Báo Giá Ngay</button>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Giá:</strong> <span class="text-danger">350.000₫</span> <del>400.000₫</del></p>
+            <p><strong>Thương hiệu:</strong> Khắc Dấu Ấn</p>
+            <p><strong>Chất liệu:</strong> Gỗ sồi</p>
+            <p><strong>Kích thước:</strong> 20×10cm, 30×15cm, 40×20cm</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Khắc nội dung:</strong> Tên, ngày, logo</p>
+            <p><strong>Font chữ:</strong> Hơn 15 mẫu</p>
+            <p><strong>Hoàn thiện:</strong> Tự nhiên, sơn, nhuộm</p>
+            <p><strong>Bảo hành:</strong> 12 tháng</p>
+          </div>
+        </div>
+
+        <h5 class="mt-4">Mô Tả</h5>
+        <p>Sản phẩm khắc gỗ thủ công với công nghệ laser sắc nét – món quà ý nghĩa cho dịp đặc biệt.</p>
+
+        <h5>Đặc Điểm Nổi Bật</h5>
+        <ul>
+          <li>Gỗ sồi tự nhiên cao cấp</li>
+          <li>Khắc laser chính xác</li>
+          <li>Tùy chỉnh nội dung & kiểu dáng</li>
+          <li>Đa dạng kích cỡ</li>
+          <li>Thân thiện môi trường</li>
+          <li>Quà tặng tuyệt vời</li>
+        </ul>
+
+        <h4 class="mt-5">Sản Phẩm Liên Quan</h4>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/34d4316caf-d76a9fc0a8d57bf1f33a.png" class="card-img-top">
+              <div class="card-body">
+                <h6>Bảng Gỗ Gia Đình</h6>
+                <p class="small">Từ 400.000₫</p>
+                <a href="#" class="small text-primary">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/34d4316caf-d76a9fc0a8d57bf1f33a.png" class="card-img-top">
+              <div class="card-body">
+                <h6>Bảng Logo Công Ty</h6>
+                <p class="small">Từ 500.000₫</p>
+                <a href="#" class="small text-primary">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/34d4316caf-d76a9fc0a8d57bf1f33a.png" class="card-img-top">
+              <div class="card-body">
+                <h6>Thớt Gỗ Khắc Tên</h6>
+                <p class="small">Từ 450.000₫</p>
+                <a href="#" class="small text-primary">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Về Chúng Tôi</h5>
+        <p>"Khắc Dấu Ấn" là thương hiệu khắc dấu uy tín, mang đến chất lượng cá nhân hóa và dịch vụ nhanh chóng trên toàn Việt Nam.</p>
+        <p>
+          <i class="fab fa-facebook me-2"></i>
+          <i class="fab fa-instagram me-2"></i>
+          <i class="fa fa-phone"></i>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h5>Thông Tin Liên Hệ</h5>
+        <p><i class="fa fa-map-marker-alt me-2"></i>123 Đường ABC, Hà Nội</p>
+        <p><i class="fa fa-phone me-2"></i>0123.456.789</p>
+        <p><i class="fa fa-envelope me-2"></i>contact@khacdau.vn</p>
+        <p><i class="fab fa-facebook me-2"></i>fb.com/khacdau.official</p>
+        <p><i class="fab fa-zalo me-2"></i>Zalo: 0123.456.789</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Giờ Làm Việc</h5>
+        <p>Thứ 2 – Thứ 7: 8:00 – 18:00<br>Chủ nhật: Nghỉ</p>
+        <form class="d-flex align-items-center">
+        <input type="email" class="form-control  " placeholder="Email của bạn" />
+        <button class="btn btn-yellow" style="white-space: nowrap; background-color: #e0a800;">Đăng ký</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 Khắc Dấu Ấn. Tất cả quyền được bảo lưu.</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
