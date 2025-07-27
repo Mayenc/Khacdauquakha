@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khắc Dấu Ấn</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
-     body {
+    body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
     }
+
     .top-banner {
       background-color: #a30000;
       color: white;
       font-size: 14px;
+      margin-top: unset;
     }
+
     .navbar-brand strong {
       color: #006e43;
     }
+
     /* .hero {
       background: url('https://storage.googleapis.com/uxpilot-auth.appspot.com/e3af1340b7-f9b0b8e3e271a37fc985.png') center/cover no-repeat;
       padding: 120px 20px;
@@ -38,46 +43,55 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* Màu xám mờ */
+      background: rgba(0, 0, 0, 0.4);
+      /* Màu xám mờ */
       z-index: 1;
     }
 
-    .hero > * {
+    .hero>* {
       position: relative;
       z-index: 2;
     }
+
     .hero h1 {
       font-size: 3rem;
       font-weight: bold;
     }
+
     .btn-yellow {
       background-color: #ffc107;
       border: none;
       padding: 10px 20px;
       font-weight: 500;
     }
+
     .btn-yellow:hover {
       background-color: #e0a800;
     }
+
     .section-title {
       color: #a30000;
       font-weight: bold;
     }
+
     .service-card {
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: .5rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
       display: flex;
       flex-direction: column;
     }
+
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
+
     .service-card img {
       width: 100%;
       height: 180px;
@@ -85,6 +99,7 @@
       border-top-left-radius: .5rem;
       border-top-right-radius: .5rem;
     }
+
     .service-card .card-body {
       flex: 1;
       display: flex;
@@ -92,25 +107,29 @@
       justify-content: space-between;
       height: 200px;
     }
+
     .highlight-section {
       background-color: #006e43;
       color: white;
       padding: 60px;
       text-align: center;
     }
+
     .alert-box {
       background-color: #fff9e6;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
       width: 100%;
       margin: 0;
     }
+
     .alert-section-wrapper {
       width: 100%;
       background-color: #fff9e6;
       padding: 30px 0;
     }
+
     .icon-round {
       background-color: #ffc107;
       width: 100px;
@@ -121,20 +140,24 @@
       border-radius: 50%;
       margin: 0 auto 10px;
     }
+
     .policies-section {
       width: 100%;
       padding: 60px 0;
       background-color: #f8f9fa;
     }
+
     footer {
       background-color: #006e43;
       color: white;
       padding: 40px 0 0;
     }
+
     footer a {
       color: white;
       text-decoration: none;
     }
+
     .footer-bottom {
       background-color: #005437;
       text-align: center;
@@ -142,21 +165,27 @@
       font-size: 14px;
       color: #ccc;
     }
+
     .alert-wrapper {
-      background-color: #fff4e6; /* đỏ nhạt hơn rõ hơn */
+      background-color: #fff4e6;
+      /* đỏ nhạt hơn rõ hơn */
       width: 100%;
     }
+
     .alert-box {
       background-color: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
+
     .delivery-policy-section {
-      background-color: #e9ecef; /* xám rõ hơn so với #f8f9fa */
+      background-color: #e9ecef;
+      /* xám rõ hơn so với #f8f9fa */
       width: 100%;
     }
-    .custom-card {
+
+    /* .custom-card {
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       background-color: #f9fefc;
@@ -169,6 +198,26 @@
     .custom-card:hover {
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
       transform: translateY(-6px);
+    } */
+    .custom-card {
+      border-radius: 12px;
+      background-color: #f9fefc;
+      /* Giữ tone chủ đạo */
+      padding: 12px;
+      max-width: 340px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      /* box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.12),   
+        0 4px 16px rgba(25, 135, 84, 0.1);  */
+    }
+
+    .custom-card:hover {
+      box-shadow:
+        0 6px 10px rgba(0, 0, 0, 0.15),
+        0 8px 20px rgba(25, 135, 84, 0.12);
+      transform: translateY(-4px);
     }
 
     .custom-card img {
@@ -207,15 +256,18 @@
       background-color: #e0a800;
       color: #004d00;
     }
-    .text-section-info{
-      font-size: 1.25rem; 
-      line-height: 1.75rem; 
+
+    .text-section-info {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
       margin-bottom: 2rem;
     }
-    .icon_guarantee{
+
+    .icon_guarantee {
       font-size: 2.2rem;
       color: #696969;
     }
+
     .card-bottom {
       display: flex;
       justify-content: space-between;
@@ -225,265 +277,409 @@
     .text-price {
       font-size: 1.1rem;
     }
+
+    .img-clickable {
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .img-clickable:hover {
+      transform: scale(1.02);
+    }
+    /* Dropdown chung */
+    .custom-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: max-content; /* Rộng đúng theo nội dung */
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 4px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 999;
+      white-space: nowrap; /* Không cho item xuống dòng */
+    }
+
+    /* Khi dropdown mở */
+    .nav-item.show .custom-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Item bên trong dropdown */
+    .custom-dropdown li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #212529;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    /* Hover item */
+    .custom-dropdown li a:hover {
+      background-color: #f8f9fa;
+      color: #198754; 
+    }
+
+
+    /* ===== Navbar link chung ===== */
+    .navbar .nav-link {
+      font-weight: 600;
+      color: #212529;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Icon trong menu không bị ảnh hưởng */
+    .navbar .nav-link i {
+      font-size: 0.85rem;
+      transition: transform 0.3s;
+    }
+
+    /* Khi hover có thể xoay nhẹ icon dropdown */
+    .navbar .nav-link:hover i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== Gạch chân dưới chữ menu ===== */
+    .navbar .nav-link .menu-label {
+      position: relative;
+      display: inline-block;
+    }
+
+    .navbar .nav-link .menu-label::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #198754;
+      transition: width 0.3s ease;
+    }
+
+    .navbar .nav-link:hover .menu-label::after,
+    .navbar .nav-link.active .menu-label::after {
+      width: 100%;
+    }
   </style>
 </head>
+
 <body>
   <!-- Top Banner -->
-  <div class="top-banner text-center py-2">
-    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn Nha Trang - Hotline: 0123.456.789 | Miễn phí ship đơn hàng từ 300,000đ
+  <div class="top-banner text-center py-2" style="margin-top: unset;">
+    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn quốc - Hotline: 0935805165 | Miễn phí ship đơn hàng từ
+    500,000đ
   </div>
 
-  <!-- Navbar -->
-  <!-- <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm" style="margin-top: unset;">
     <div class="container">
-      <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
-      </ul>
+      <a href="https://khacdauquakha.com/"><img
+          src="https://khacdauquakha.com/wp-content/uploads/2025/07/a241dba34cccc5929cdd.jpg" height="50px"
+          style="margin-right: 10px;" />
+        <a class="navbar-brand" href="https://khacdauquakha.com/"><strong>KHẮC DẤU QUA KHA</strong></a></a>
+
+      <!-- Nút toggle khi màn hình nhỏ -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Các mục menu nằm trong div collapse -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="https://khacdauquakha.com/"><span class="menu-label">Trang chủ</span></a></li> 
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" onclick="toggleDropdown(event)">
+            <span class="menu-label">Danh mục</span>
+          </a>
+          <ul class="custom-dropdown">
+            <li><a href="https://khacdauquakha.com/#dautron">DẤU TRÒN CÔNG TY</a></li>
+            <li><a href="https://khacdauquakha.com/#daumasothue">DẤU MÃ SỐ THUẾ</a></li>
+            <li><a href="https://khacdauquakha.com/#daucongvanden">DẤU CÔNG VĂN ĐẾN</a></li>
+            <li><a href="https://khacdauquakha.com/#daulogo">DẤU LOGO</a></li>
+            <li><a href="https://khacdauquakha.com/#dauchuky">DẤU CHỮ KÝ</a></li>
+            <li><a href="https://khacdauquakha.com/#dauhoancong">DẤU HOÀN CÔNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautichdiem">DẤU TÍCH ĐIỂM</a></li>
+            <li><a href="https://khacdauquakha.com/#daudongdate">DẤU ĐÓNG DATE</a></li>
+            <li><a href="https://khacdauquakha.com/#dauvanphong">DẤU VĂN PHÒNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautampon">DẤU CÁN (Chấm mực Tampon)</a></li>
+            <hr>
+            <li><a href="https://khacdauquakha.com/#banghieuctyhkd">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</a></li>
+            <hr>
+            <li><a href="https://khacdauquakha.com/#hopmuc">HỘP MỰC LĂN TAY</a></li>
+          </ul>
+        </li>
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/#dichvu"><span class="menu-label">Dịch vụ</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/#chinhsachbaohanh"><span class="menu-label">Chính sách</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/index.php/contact/"><span class="menu-label">Liên hệ</span></a></li>
+        </ul>
+      </div>
     </div>
-  </nav> -->
-
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
-
-    <!-- Nút toggle khi màn hình nhỏ -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Các mục menu nằm trong div collapse -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact_page.html">Liên hệ</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" style="margin-top: unset;">
     <h1>Dịch Vụ Khắc Dấu Chuyên Nghiệp</h1>
-    <p>Khắc gỗ, khắc kim loại, khắc laser trên quà tặng với chất lượng cao</p>
+    <p>Khắc dấu, khắc bảng hiệu, lăn tay với sản phẩm chất lượng cao</p>
     <a class="btn btn-yellow mt-3">Xem dịch vụ</a>
   </section>
 
   <!-- Services -->
-  <section class="container py-5">
+  <section id="dichvu" class="container py-5" style="margin-top: unset;">
     <h2 class="text-center section-title">Tất Cả Dịch Vụ Khắc Dấu</h2>
     <p class="text-center text-success">Chúng tôi cung cấp đa dạng dịch vụ khắc với chất lượng tốt nhất</p>
     <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
-      <div class="col">
-        <!-- <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e79c9cf186-61187103787f43a320c3.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
-          <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
-        </div> -->
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e79c9cf186-61187103787f43a320c3.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
+      <div class="col" id="dautron">
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/f1853e696f14e64abf05.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU TRÒN CÔNG TY</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e79c9cf186-61187103787f43a320c3.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Gỗ</h5>
-            <p>Khắc tên, logo, hình ảnh trên các sản phẩm gỗ cao cấp</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/711b199257-359fe8b2983d197ec39f.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="daucongvanden">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/ea19217b6a06e358ba17.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU CÔNG VĂN ĐẾN</h5>
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/711b199257-359fe8b2983d197ec39f.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Da</h5>
-            <p>Khắc chữ, hoa văn trên ví, túi xách, phụ kiện da</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/372c28a097-8928518b956df25b35d4.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="dauhoancong">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/de036ea52bd8a286fbc9.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU HOÀN CÔNG</h5>
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/372c28a097-8928518b956df25b35d4.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Quà Tặng</h5>
-            <p>Cá nhân hóa quà tặng với thông điệp ý nghĩa</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/372c28a097-8928518b956df25b35d4.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="daudongdate">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/84ca9721d65c5f02064d.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU ĐÓNG DATE</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/372c28a097-8928518b956df25b35d4.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Quà Tặng</h5>
-            <p>Cá nhân hóa quà tặng với thông điệp ý nghĩa</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/481d85fffa-bec38795aaff4b17d7ce.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/60501ab95bc4d29a8bd5.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">MỰC DẤU</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/481d85fffa-bec38795aaff4b17d7ce.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Logo</h5>
-            <p>Khắc logo công ty, thương hiệu trên nhiều chất liệu</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/af3b1a9860-d1d3aa59d78a9d2bfecc.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="dautampon">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/6fb87256332bba75e33a.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">TAMPON</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/af3b1a9860-d1d3aa59d78a9d2bfecc.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Dấu Công</h5>
-            <p>Dấu công ty, dấu tròn, dấu vuông theo yêu cầu</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4119ca412a-444550b8c976e4b431dd.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="dautichdiem">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/fe2b05294754ce0a9745.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU TÍCH ĐIỂM</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4119ca412a-444550b8c976e4b431dd.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Kim Loại</h5>
-            <p>Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
-      </div>
-      <div class="col">
-        <div class="custom-card mx-auto">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4119ca412a-444550b8c976e4b431dd.png"
-            alt="Khắc Kim Loại">
-          <h5 class="text-success fw-bold">Khắc Kim Loại</h5>
-          <p class="text-secondary">Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
 
-          <div class="card-bottom d-flex justify-content-between align-items-center">
+      </div>
+      <div class="col" id="daumasothue">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/ab328fa1f6dc7f8226cd.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU MÃ SỐ THUẾ</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
             <span class="text-price fw-semibold text-dark">500.000 đ</span>
-            <a href="contact_page.html" class="btn custom-btn">Liên hệ ngay</a>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
           </div>
         </div>
-        <!-- <div class="card service-card">
-          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4119ca412a-444550b8c976e4b431dd.png" alt="">
-          <div class="card-body">
-            <h5 class="text-success">Khắc Kim Loại</h5>
-            <p>Khắc trên thép, nhôm, đồng với độ chính xác cao</p>
-            <a href="#" class="btn btn-yellow">Liên hệ ngay</a>
-          </div>
-        </div> -->
+
       </div>
+      <!---->
+      <div class="col" id="daulogo">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/d9bc302c4b51c20f9b40.jpg" alt="Khắc Kim Loại"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU LOGO</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="col" id="dauvanphong">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/d1c69950f12d7873213c.jpg" alt="DẤU VĂN PHÒNG"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">DẤU VĂN PHÒNG</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="col" id="banghieuctyhkd">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/f82e785b18269178c837.jpg" alt="DẤU VĂN PHÒNG"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="col" id="banghieuctyhkd">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/bbdb55c935b4bceae5a5.jpg" alt="DẤU VĂN PHÒNG"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="col" id="hopmuc">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/9a9304e51b9892c6cb89.jpg" alt="DẤU VĂN PHÒNG"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">HỘP MỰC LĂN TAY</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+      <div class="col" id="hopmuc">
+        <div class="custom-card mx-auto h-100 d-flex flex-column">
+          <img src="https://khacdauquakha.com/wp-content/uploads/2025/07/fdfa298d36f0bfaee6e1.jpg" alt="DẤU VĂN PHÒNG"
+            class="img-thumbnail img-clickable" onclick="openImageModal(this.src)">
+          <h5 class="text-success fw-bold mb-4">HỘP MỰC LĂN TAY</h5>
+
+
+          <div class="card-bottom d-flex flex-wrap justify-content-between align-items-center mt-auto">
+            <span class="text-price fw-semibold text-dark">500.000 đ</span>
+            <a href="https://khacdauquakha.com/index.php/contact/" class="btn custom-btn mt-2 mt-md-0">Liên hệ ngay</a>
+          </div>
+        </div>
+      </div>
+      <!---->
     </div>
   </section>
-
+  <!-- Modal dùng chung -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center">
+          <img id="modalImage" src="" alt="Phóng to ảnh" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Highlight Section -->
-  <section class="highlight-section">
-    <h1 style="font-weight: bold; padding-bottom: 10px;">DỊCH VỤ KHẮC DẤU</h2>
-    <p class="mt-3 text-section-info">Chúng tôi cung cấp dịch vụ khắc dấu giá rẻ, giao trong ngày với dịch vụ giao hàng tận nơi tại Nha Trang.</p>
-    <p class="text-section-info">Được trang bị máy khắc hiện đại và nhiều năm kinh nghiệm, chúng tôi đáp ứng được những yêu cầu khắt khe nhất.</p>
-    <a href="contact_page.html" class="btn btn-yellow mt-3">Liên hệ ngay</a>
+  <section class="highlight-section" style="margin-top: unset;">
+    <h1 style="font-weight: bold; padding-bottom: 10px;">KHẮC DẤU QUA KHA</h2>
+      <p class="mt-3 text-section-info">Chúng tôi cung cấp dịch vụ khắc dấu giá rẻ, giao trong ngày với dịch vụ giao
+        hàng tận nơi tại Nha Trang.</p>
+      <p class="text-section-info">Được trang bị máy khắc hiện đại và nhiều năm kinh nghiệm, chúng tôi đáp ứng được
+        những yêu cầu khắt khe nhất.</p>
+      <a href="https://khacdauquakha.com/index.php/contact/" class="btn btn-yellow mt-3">Liên hệ ngay</a>
   </section>
 
   <!-- Alert -->
-  <section class="alert-wrapper bg-warning-subtle py-5">
-  <div class="container">
-    <div class="alert-box">
-      <h5 class="text-danger"><i class="fa fa-warning text-warning me-2"></i> Lưu Ý Quan Trọng Cho Khách Hàng</h5>
-      <ul>
-      	<li>Hãy cảnh giác với các dịch vụ giá quá rẻ – họ có thể sử dụng chất liệu kém chất lượng và mực không bền.</li>
-      	<li>Sản phẩm của chúng tôi được chế tác bằng công cụ cao cấp và giao hàng bởi đội ngũ chuyên nghiệp am hiểu Nha Trang.</li>
-    </ul>
+  <section class="alert-wrapper bg-warning-subtle py-5" style="margin-top: unset;">
+    <div class="container">
+      <div class="alert-box">
+        <h5 class="text-danger"><i class="fa fa-warning text-warning me-2"></i> Lưu Ý Quan Trọng Cho Khách Hàng</h5>
+        <ul>
+          <li>Hãy cảnh giác với các dịch vụ giá quá rẻ – họ có thể sử dụng chất liệu kém chất lượng và mực không bền.
+          </li>
+          <li>Sản phẩm của chúng tôi được chế tác bằng công cụ cao cấp và giao hàng bởi đội ngũ chuyên nghiệp am hiểu
+            Nha Trang.</li>
+        </ul>
+      </div>
     </div>
-  </div>
   </section>
 
   <!-- Policies -->
-  <section class="container py-5">
+  <section id="chinhsachbaohanh" class="container py-5" style="margin-top: unset;">
     <h2 class="text-center section-title">Chính Sách Bảo Hành</h2>
     <p class="text-center text-success">Cam kết chất lượng với chính sách bảo hành rõ ràng</p>
     <div class="row text-center py-4">
@@ -505,101 +701,137 @@
     </div>
   </section>
 
-  <section class="delivery-policy-section py-5">
-  <div class="container">
-    <h2 class="text-center section-title">Chính Sách Giao Hàng</h2>
-    <p class="text-center text-success">Đa dạng phương thức giao hàng phù hợp với nhu cầu</p>
-    <div class="row text-center py-4">
-      <div class="col-md-3">
-        <div class="icon-round"><i class="fa fa-bicycle icon_guarantee"></i></div>
-        <h6 class="mt-2">Giao Trong Ngày</h6>
-        <p>Nội thành Nha Trang trong 2–4 giờ</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon-round"><i class="fa fa-truck icon_guarantee"></i></div>
-        <h6 class="mt-2">Giao Hàng Nhanh</h6>
-        <p>Toàn quốc 1–3 ngày làm việc</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon-round"><i class="fa fa-box icon_guarantee"></i></div>
-        <h6 class="mt-2">Đóng Gói Cẩn Thận</h6>
-        <p>Bảo vệ sản phẩm tối đa</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon-round"><i class="fa fa-money-bill icon_guarantee"></i></div>
-        <h6 class="mt-2">COD Toàn Quốc</h6>
-        <p>Thanh toán khi nhận hàng</p>
-      </div>
-    </div>
-   </div>
-</section>
-  <!-- Footer -->
-  <!-- <footer>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Về Chúng Tôi</h5>
-          <p>"Khắc Dấu Ấn" là thương hiệu khắc dấu uy tín, mang đến chất lượng cá nhân hóa và dịch vụ nhanh chóng trên toàn Việt Nam.</p>
-          <p>
-            <i class="fab fa-facebook me-2"></i>
-            <i class="fab fa-instagram me-2"></i>
-            <i class="fa fa-phone"></i>
-          </p>
+  <section id="chinhsachgiaohang" class="delivery-policy-section py-5" style="margin-top: unset;">
+    <div class="container">
+      <h2 class="text-center section-title">Chính Sách Giao Hàng</h2>
+      <p class="text-center text-success">Đa dạng phương thức giao hàng phù hợp với nhu cầu</p>
+      <div class="row text-center py-4">
+        <div class="col-md-3">
+          <div class="icon-round"><i class="fa fa-bicycle icon_guarantee"></i></div>
+          <h6 class="mt-2">Giao Trong Ngày</h6>
+          <p>Nội thành Nha Trang trong 24 giờ</p>
         </div>
-        <div class="col-md-4">
-          <h5>Thông Tin Liên Hệ</h5>
-          <p><i class="fa fa-map-marker-alt me-2"></i>123 Đường ABC, Nha Trang</p>
-          <p><i class="fa fa-phone me-2"></i>0123.456.789</p>
-          <p><i class="fa fa-envelope me-2"></i>contact@khacdau.vn</p>
-          <p><i class="fab fa-facebook me-2"></i>fb.com/khacdau.official</p>
-          <p><i class="fab fa-zalo me-2"></i>Zalo: 0123.456.789</p>
+        <div class="col-md-3">
+          <div class="icon-round"><i class="fa fa-truck icon_guarantee"></i></div>
+          <h6 class="mt-2">Giao Hàng Nhanh</h6>
+          <p>Toàn quốc 3–7 ngày làm việc</p>
         </div>
-        <div class="col-md-4">
-          <h5>Giờ Làm Việc</h5>
-          <p>Thứ 2 – Thứ 7: 8:00 – 18:00<br>Chủ nhật: Nghỉ</p>
-          <form class="d-flex align-items-center">
-          <button class="btn btn-yellow" style="white-space: nowrap">Liên hệ ngay</button>
-        </form>
+        <div class="col-md-3">
+          <div class="icon-round"><i class="fa fa-box icon_guarantee"></i></div>
+          <h6 class="mt-2">Đóng Gói Cẩn Thận</h6>
+          <p>Bảo vệ sản phẩm tối đa</p>
+        </div>
+        <div class="col-md-3">
+          <div class="icon-round"><i class="fa fa-money-bill icon_guarantee"></i></div>
+          <h6 class="mt-2">COD Toàn Quốc</h6>
+          <p>Thanh toán khi nhận hàng</p>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">© 2024 Khắc Dấu Ấn. Tất cả quyền được bảo lưu.</div>
-  </footer> -->
-  <footer class="text-light py-5">
+  </section>
+  <footer class="text-light py-5" style="margin-top: unset;">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <h3><b>Khắc Dấu Ấn</b></h3>
+
+          <h3><b>KHẮC DẤU QUA KHA</b></h3>
           <p class="small">Chuyên cung cấp dịch vụ khắc dấu chuyên nghiệp với chất lượng cao và giá cả hợp lý.</p>
         </div>
         <div class="col-md-3">
-          <h6>Dịch Vụ</h6>
+          <h5>Dịch Vụ</h6>
           <ul class="list-unstyled small">
-            <li>Khắc Gỗ</li>
-            <li>Khắc Kim Loại</li>
-            <li>Khắc Quà Tặng</li>
+            <li><a href="https://khacdauquakha.com/#dautron">DẤU TRÒN CÔNG TY</a></li>
+            <li><a href="https://khacdauquakha.com/#daumasothue">DẤU MÃ SỐ THUẾ</a></li>
+            <li><a href="https://khacdauquakha.com/#daucongvanden">DẤU CÔNG VĂN ĐẾN</a></li>
+            <li><a href="https://khacdauquakha.com/#daulogo">DẤU LOGO</a></li>
+            <li><a href="https://khacdauquakha.com/#dauchuky">DẤU CHỮ KÝ</a></li>
+            <li><a href="https://khacdauquakha.com/#dauhoancong">DẤU HOÀN CÔNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautichdiem">DẤU TÍCH ĐIỂM</a></li>
+            <li><a href="https://khacdauquakha.com/#daudongdate">DẤU ĐÓNG DATE</a></li>
+            <li><a href="https://khacdauquakha.com/#dauvanphong">DẤU VĂN PHÒNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautampon">DẤU CÁN (Chấm mực Tampon)</a></li>
+            <li><a href="https://khacdauquakha.com/#banghieuctyhkd">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</a></li>
+            <li><a href="https://khacdauquakha.com/#hopmuc">HỘP MỰC LĂN TAY</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h6>Hỗ Trợ</h6>
+          <h5>Hỗ Trợ</h5>
           <ul class="list-unstyled small">
-            <li>Chính Sách Bảo Hành</li>
-            <li>Chính Sách giao hàng</li>
+            <li><a href="#chinhsachbaohanh">Chính Sách Bảo Hành</a></li>
+            <li><a href="#chinhsachgiaohang">Chính Sách giao hàng</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h6>Liên Hệ</h6>
-          <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>123 Đường ABC, Nha Trang</p>
-          <p class="small mb-1"><i class="fa fa-phone me-2"></i>0123.456.789</p>
-          <p class="small mb-1"><i class="fa fa-envelope me-2"></i>contact@khacdau.vn</p>
-          <p class="small mb-1"><i class="fab fa-facebook me-2"></i>fb.com/khacdau.official</p>
-          <p class="small mb-1"><i class="fas fa-comment-dots me-2"></i>Zalo: 0123.456.789</p>
+          <h5>Liên Hệ</h5>
+          <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>38 Thái Nguyên, Phường Tây Nha Trang, Tỉnh
+            Khánh Hòa, Việt Nam</p>
+          <p class="small mb-1"><i class="fa fa-phone me-2"></i>0935805165</p>
+          <p class="small mb-1"><i class="fa fa-envelope me-2"></i>quakhanhatrang@gmail.com</p>
+          <p class="small mb-1"><i class="fas fa-comment-dots me-2"></i>Zalo: 0935805165</p>
         </div>
       </div>
-      <div class="text-center pt-4 small">&copy; 2025 Khắc Dấu Ấn. Tất cả quyền được bảo lưu.</div>
+      <div class="text-center pt-4 small">&copy; 2025 Khắc Dấu Qua Kha. Tất cả quyền được bảo lưu.</div>
     </div>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script mở modal -->
+  <script>
+    function openImageModal(imageSrc) {
+      document.getElementById("modalImage").src = imageSrc;
+      $('#imageModal').modal('show');
+    }
+    function toggleDropdown(e) {
+      e.preventDefault();
+      const parent = e.target.closest('.nav-item');
+
+      if (!parent) return; // <-- nếu không có nav-item, thoát
+
+      // Ẩn các dropdown khác
+      document.querySelectorAll('.nav-item').forEach(item => {
+        if (item !== parent) item.classList.remove('show');
+      });
+
+      // Toggle dropdown hiện tại
+      parent.classList.toggle('show');
+    }
+
+    // Tắt dropdown khi click ra ngoài
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('show'));
+        }
+      });
+      // Lắng nghe tất cả các click trên menu chính
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        // Bỏ active khỏi toàn bộ nav-link
+        document.querySelectorAll('.navbar .nav-link').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Gán active cho link hiện tại
+        this.classList.add('active');
+      });
+    });
+
+    // Lắng nghe thêm các click vào dropdown-item để active luôn menu cha
+    document.querySelectorAll('.custom-dropdown a').forEach(dropItem => {
+      dropItem.addEventListener('click', function () {
+        // Bỏ active khỏi toàn bộ nav-link
+        document.querySelectorAll('.navbar .nav-link').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Tìm phần tử cha .nav-item → .nav-link để active menu dropdown
+        const parentDropdown = this.closest('.nav-item').querySelector('.nav-link');
+        if (parentDropdown) {
+          parentDropdown.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

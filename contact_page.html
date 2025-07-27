@@ -1,68 +1,91 @@
+<!------------------------------------------------------------------------------------>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khắc Dấu Ấn</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
-     body {
+    body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
     }
+
     .top-banner {
       background-color: #a30000;
       color: white;
       font-size: 14px;
+      margin-top: unset;
     }
+
     .navbar-brand strong {
       color: #006e43;
     }
-    /* .contact-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
+
+    footer {
+      background-color: #006e43;
+      color: white;
+      padding: 40px 0 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      background-color: #005437;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+
+    .text-price {
+      font-size: 1.1rem;
+    }
+
+    .img-clickable {
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .img-clickable:hover {
+      transform: scale(1.02);
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       padding: 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
       background: #fff;
-    } */
-     .contact-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding: 2rem;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        background: #fff;
-        text-align: center;
     }
 
     .icon-circle {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background-color: #f1f5f9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        margin: 0 auto 1rem auto;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin: 0 auto 1rem auto;
     }
 
     .contact-content {
-        flex-grow: 1;
+      flex-grow: 1;
     }
 
-    .qr-code-box {
-        height: 120px;
-        background: #e2e8f0;
-        border-radius: 8px;
-        line-height: 120px;
-        color: #6b7280;
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-    }
+
     .icon-circle {
       width: 48px;
       height: 48px;
@@ -73,13 +96,16 @@
       justify-content: center;
       margin: 0 auto 1rem auto;
     }
+
     .btn-dark {
       background-color: #0f172a;
       border: none;
     }
+
     .btn-dark:hover {
       background-color: #1e293b;
     }
+
     .map-placeholder {
       background-color: #e5e7eb;
       width: 100%;
@@ -90,236 +116,409 @@
       color: #6b7280;
       border-radius: 8px;
     }
-    footer {
-      background-color: #006e43;
-      color: white;
-      padding: 40px 0 0;
+    .contact-card-header {
+      background-color: #fff;
+      transition: transform 0.3s;
     }
-    footer a {
+
+    .contact-card-header:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background-color: #e9f6ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .qr-code-box img {
+      border-radius: 8px;
+    }
+    .zalo-card {
+      background-color: #fff;
+      transition: transform 0.3s;
+    }
+
+    .zalo-card .qr-code-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .zalo-card .qr-img {
+      max-width: 100%;
+      width: 280px;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .btn-zalo {
+      background-color: #0084ff;        /* màu xanh Zalo */
       color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 132, 255, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
       text-decoration: none;
     }
-    .footer-bottom {
-      background-color: #005437;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-      color: #ccc;
+
+    .btn-zalo:hover {
+      background-color: #006fdd;
+      box-shadow: 0 6px 14px rgba(0, 132, 255, 0.4);
+      transform: translateY(-2px);
     }
-    .alert-wrapper {
-      background-color: #fff4e6; /* đỏ nhạt hơn rõ hơn */
+    /* Dropdown chung */
+    .custom-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: max-content; /* Rộng đúng theo nội dung */
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 4px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 999;
+      white-space: nowrap; /* Không cho item xuống dòng */
+    }
+
+    /* Khi dropdown mở */
+    .nav-item.show .custom-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Item bên trong dropdown */
+    .custom-dropdown li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #212529;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    /* Hover item */
+    .custom-dropdown li a:hover {
+      background-color: #f8f9fa;
+      color: #198754; 
+    }
+
+
+    /* ===== Navbar link chung ===== */
+    .navbar .nav-link {
+      font-weight: 600;
+      color: #212529;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Icon trong menu không bị ảnh hưởng */
+    .navbar .nav-link i {
+      font-size: 0.85rem;
+      transition: transform 0.3s;
+    }
+
+    /* Khi hover có thể xoay nhẹ icon dropdown */
+    .navbar .nav-link:hover i {
+      transform: rotate(180deg);
+    }
+
+    /* ===== Gạch chân dưới chữ menu ===== */
+    .navbar .nav-link .menu-label {
+      position: relative;
+      display: inline-block;
+    }
+
+    .navbar .nav-link .menu-label::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #198754;
+      transition: width 0.3s ease;
+    }
+
+    .navbar .nav-link:hover .menu-label::after,
+    .navbar .nav-link.active .menu-label::after {
       width: 100%;
     }
-    .alert-box {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    </style>
+  </style>
 </head>
+
 <body>
   <!-- Top Banner -->
-  <div class="top-banner text-center py-2">
-    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn Nha Trang - Hotline: 0123.456.789 | Miễn phí ship đơn hàng từ 300,000đ
+  <div class="top-banner text-center py-2" style="margin-top: unset;">
+    <i class="fa fa-motorcycle"></i> Giao hàng nhanh toàn quốc - Hotline: 0935805165 | Miễn phí ship đơn hàng từ
+    500,000đ
   </div>
 
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#"><strong>Khắc Dấu Ấn</strong></a>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm" style="margin-top: unset;">
+    <div class="container">
+      <a href="https://khacdauquakha.com/"><img
+          src="https://khacdauquakha.com/wp-content/uploads/2025/07/a241dba34cccc5929cdd.jpg" height="50px"
+          style="margin-right: 10px;" />
+        <a class="navbar-brand" href="https://khacdauquakha.com/"><strong>KHẮC DẤU QUA KHA</strong></a></a>
 
-    <!-- Nút toggle khi màn hình nhỏ -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Nút toggle khi màn hình nhỏ -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Các mục menu nằm trong div collapse -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Bảng giá</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Mẫu khắc</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Chính sách</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact_page.html">Liên hệ</a></li>
-      </ul>
+      <!-- Các mục menu nằm trong div collapse -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/"><span class="menu-label">Trang chủ</span></a></li> 
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" onclick="toggleDropdown(event)">
+            <span class="menu-label">Danh mục</span>
+          </a>
+          <ul class="custom-dropdown">
+            <li><a href="https://khacdauquakha.com/#dautron">DẤU TRÒN CÔNG TY</a></li>
+            <li><a href="https://khacdauquakha.com/#daumasothue">DẤU MÃ SỐ THUẾ</a></li>
+            <li><a href="https://khacdauquakha.com/#daucongvanden">DẤU CÔNG VĂN ĐẾN</a></li>
+            <li><a href="https://khacdauquakha.com/#daulogo">DẤU LOGO</a></li>
+            <li><a href="https://khacdauquakha.com/#dauchuky">DẤU CHỮ KÝ</a></li>
+            <li><a href="https://khacdauquakha.com/#dauhoancong">DẤU HOÀN CÔNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautichdiem">DẤU TÍCH ĐIỂM</a></li>
+            <li><a href="https://khacdauquakha.com/#daudongdate">DẤU ĐÓNG DATE</a></li>
+            <li><a href="https://khacdauquakha.com/#dauvanphong">DẤU VĂN PHÒNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautampon">DẤU CÁN (Chấm mực Tampon)</a></li>
+            <hr>
+            <li><a href="https://khacdauquakha.com/#banghieuctyhkd">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</a></li>
+            <hr>
+            <li><a href="https://khacdauquakha.com/#hopmuc">HỘP MỰC LĂN TAY</a></li>
+          </ul>
+        </li>
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/#dichvu"><span class="menu-label">Dịch vụ</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://khacdauquakha.com/#chinhsachbaohanh"><span class="menu-label">Chính sách</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="https://khacdauquakha.com/index.php/contact/"><span class="menu-label">Liên hệ</span></a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-   <header class="text-center py-5">
+  </nav>
+
+  <header class="text-center py-5" style="margin-top: unset;">
     <h2>Liên Hệ Với Chúng Tôi</h2>
-    <p class="text-muted">Chúng tôi luôn sẵn sàng hỗ trợ bạn với các dịch vụ khắc dấu chuyên nghiệp. Hãy liên hệ ngay!</p>
+    <p class="text-muted">Chúng tôi luôn sẵn sàng hỗ trợ bạn với các dịch vụ khắc dấu chuyên nghiệp. Hãy liên hệ ngay!
+    </p>
   </header>
-  <div class="container mb-5">
-    <div class="row g-4">
-        <!-- Điện thoại -->
-        <div class="col-md-4">
-        <div class="contact-card">
-            <div class="contact-content">
-            <div class="icon-circle">
-                <i class="bi bi-telephone"></i>
-            </div>
-            <h6>Điện Thoại</h6>
-            <p class="text-muted small">Gọi ngay để được tư vấn miễn phí</p>
-            <p class="fs-5 fw-bold">0123-456-789</p>
-            </div>
-            <a href="tel:0123456789" class="btn btn-dark w-100 mt-3">Gọi Ngay</a>
-        </div>
-        </div>
+  <div class="container mb-5" style="margin-top: unset;">
 
-        <!-- Email -->
-        <div class="col-md-4">
-        <div class="contact-card">
-            <div class="contact-content">
-            <div class="icon-circle">
-                <i class="bi bi-envelope"></i>
-            </div>
-            <h6>Email</h6>
-            <p class="text-muted small">Gửi email để được hỗ trợ chi tiết</p>
-            <p class="fw-semibold">info@khacdauan.com</p>
-            </div>
-            <a href="mailto:info@khacdauan.com" class="btn btn-dark w-100 mt-3">Gửi Email</a>
-        </div>
-        </div>
-
-        <!-- Zalo -->
-        <div class="col-md-4">
-        <div class="contact-card">
-            <div class="contact-content">
-            <div class="icon-circle">
-                <i class="bi bi-chat-dots"></i>
-            </div>
-            <h6>Zalo</h6>
-            <p class="text-muted small">Quét mã QR để chat trực tiếp</p>
-            <div class="qr-code-box">QR Code Zalo</div>
-            </div>
-            <a href="#" class="btn btn-dark w-100 mt-3">Chat Zalo</a>
-        </div>
-        </div>
-    </div>
-    </div>
-  <!-- <div class="container mb-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="contact-card text-center h-100">
-          <div class="icon-circle">
-            <i class="bi bi-telephone"></i>
+  <!-- Hàng 1: Số điện thoại & Email -->
+  <div class="row g-4 mb-4 text-center">
+    <!-- Hàng 2: Zalo với QR code -->
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-6 col-md-8 col-sm-10" style="margin-left: 25px;">
+        <div class="zalo-card p-4 rounded shadow">
+          <div class="icon-circle mb-3 mx-auto">
+            <a href="https://zalo.me/0935805165"><i class="bi bi-chat-dots fs-3"></i></a>
           </div>
-          <h6>Điện Thoại</h6>
-          <p class="text-muted small">Gọi ngay để được tư vấn miễn phí</p>
-          <p class="fs-5 fw-bold">0123-456-789</p>
-          <a href="tel:0123456789" class="btn btn-dark w-100">Gọi Ngay</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="contact-card text-center h-100">
-          <div class="icon-circle">
-            <i class="bi bi-envelope"></i>
+          <h5 class="fw-bold">Zalo</h5>
+          <p class="text-muted small mb-3">Quét mã QR để chat trực tiếp với chúng tôi</p>
+          <div class="qr-code-box" style="margin-bottom: 20px;">
+            <img 
+              src="https://khacdauquakha.com/wp-content/uploads/2025/07/f6279c9c0df384addde2.jpg" 
+              alt="QR Zalo" 
+              class="img-fluid" 
+              style="max-width: 40vh; border-radius: 8px;">
           </div>
-          <h6>Email</h6>
-          <p class="text-muted small">Gửi email để được hỗ trợ chi tiết</p>
-          <p class="fw-semibold">info@khacdauan.com</p>
-          <a href="mailto:info@khacdauan.com" class="btn btn-dark w-100">Gửi Email</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="contact-card text-center h-100">
-          <div class="icon-circle">
-            <i class="bi bi-chat-dots"></i>
-          </div>
-          <h6>Zalo</h6>
-          <p class="text-muted small">Quét mã QR để chat trực tiếp</p>
-          <div class="map-placeholder mb-3">QR Code Zalo</div>
-          <a href="#" class="btn btn-dark w-100">Chat Zalo</a>
+          <a href="https://zalo.me/0935805165" target="_blank" class="btn btn-zalo">
+            💬 Chat Zalo ngay
+          </a>
         </div>
       </div>
     </div>
-  </div> -->
+    <!-- Điện thoại -->
+    <div class="col-md-6">
+      <div class="contact-card-header p-3 rounded shadow h-100">
+        <div class="icon-circle mb-2 mx-auto">
+          <a href="tel:0935805165"><i class="bi bi-telephone fs-3"></i></a>
+        </div>
+        <h6 class="fw-bold mb-1">Điện Thoại</h6>
+        <a href="tel:0935805165"><p class="fs-5 text-primary fw-bold mb-0">0935 805 165</p></a>
+      </div>
+    </div>
 
-  <div class="container mb-5">
-    <h4 class="text-center mb-3">Gửi Tin Nhắn</h4>
-    <p class="text-center text-muted">Điền thông tin bên dưới và chúng tôi sẽ liên hệ trong 24h</p>
-    <form class="contact-card mx-auto" style="max-width: 700px;">
-      <div class="row g-3 mb-3">
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Họ và tên *" required>
+    <!-- Email -->
+    <div class="col-md-6">
+      <div class="contact-card-header p-3 rounded shadow h-100">
+        <div class="icon-circle mb-2 mx-auto">
+          <a href="mailto:quakhanhatrang@gmail.com?subject=Tư%20vấn%20khắc%20dấu&body=Chào%20anh%2Fchị%2C%20tôi%20muốn%20được%20tư%20vấn%20về%20dịch%20vụ%20khắc%20dấu.">
+              <i class="bi bi-envelope fs-3"></i>
+          </a>
         </div>
-        <div class="col-md-6">
-          <input type="tel" class="form-control" placeholder="Số điện thoại *" required>
-        </div>
+        <h6 class="fw-bold mb-1">Email</h6>
+        <a href="mailto:quakhanhatrang@gmail.com?subject=Tư%20vấn%20khắc%20dấu&body=Chào%20anh%2Fchị%2C%20tôi%20muốn%20được%20tư%20vấn%20về%20dịch%20vụ%20khắc%20dấu.">
+            <p class="fw-semibold text-primary mb-0">quakhanhatrang@gmail.com</p>
+        </a>
       </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email">
-      </div>
-      <div class="mb-3">
-        <select class="form-select">
-          <option selected disabled>Chọn dịch vụ</option>
-          <option>Khắc Gỗ</option>
-          <option>Khắc Kim Loại</option>
-          <option>Khắc Quà Tặng</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="4" placeholder="Mô tả chi tiết yêu cầu của bạn..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-dark w-100"><i class="bi bi-send"></i> Gửi Tin Nhắn</button>
-    </form>
+    </div>
   </div>
 
-  <div class="container mb-5">
+  
+
+</div>
+
+
+  <div class="container mb-5" style="margin-top: unset;">
     <h4 class="text-center mb-3">Địa Chỉ Cửa Hàng</h4>
     <p class="text-center text-muted">Ghé thăm cửa hàng để xem trực tiếp các sản phẩm mẫu</p>
     <div class="row g-4">
       <div class="col-md-6">
         <div class="contact-card h-100">
-          <h6>Thông Tin Liên Hệ</h6>
-          <p><strong>Địa chỉ:</strong><br>123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
-          <p><strong>Giờ làm việc:</strong><br>Thứ 2 - Thứ 7: 8:00 - 18:00<br>Chủ nhật: 9:00 - 17:00</p>
-          <p><strong>Hotline:</strong><br>0123-456-789</p>
-          <p><strong>Email:</strong><br>info@khacdauan.com</p>
+          <strong><h5>Thông Tin Liên Hệ</h6></strong>
+          <p><strong>Địa chỉ:</strong> 38 Thái Nguyên, Phường Tây Nha Trang, Tỉnh
+            Khánh Hòa, Việt Nam</p>
+          <p><strong>Giờ làm việc:</strong><br>&ensp;&ensp;&ensp;&ensp;Thứ 2 - Thứ 7: 8:00 - 18:00<br>&ensp;&ensp;&ensp;&ensp;Chủ nhật: 9:00 - 17:00</p>
+          <p><strong>Hotline:</strong> 0935805165</p>
+          <p><strong>Email:</strong> quakhanhatrang@gmail.com</p>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="map-placeholder">Google Maps Embed</div>
-      </div>
+        <div class="card shadow rounded">
+          <div class="card-body p-0">
+            <!-- Google Map -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!4v1753624870510!6m8!1m7!1sO2_1Dh_WBB9QSva4me9h9g!2m2!1d12.2481964561758!2d109.1861284704411!3f24.30537705705615!4f-2.432198392412431!5f0.7820865974627469" 
+              width="100%" 
+              height="450" 
+              style="border:0; display:block;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+    </div>
     </div>
   </div>
-  <footer class="text-light py-5">
+
+  <footer class="text-light py-5" style="margin-top: unset;">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <h3><b>Khắc Dấu Ấn</b></h3>
+
+          <h3><b>KHẮC DẤU QUA KHA</b></h3>
           <p class="small">Chuyên cung cấp dịch vụ khắc dấu chuyên nghiệp với chất lượng cao và giá cả hợp lý.</p>
         </div>
         <div class="col-md-3">
-          <h6>Dịch Vụ</h6>
+          <h5>Dịch Vụ</h6>
           <ul class="list-unstyled small">
-            <li>Khắc Gỗ</li>
-            <li>Khắc Kim Loại</li>
-            <li>Khắc Quà Tặng</li>
+            <li><a href="https://khacdauquakha.com/#dautron">DẤU TRÒN CÔNG TY</a></li>
+            <li><a href="https://khacdauquakha.com/#daumasothue">DẤU MÃ SỐ THUẾ</a></li>
+            <li><a href="https://khacdauquakha.com/#daucongvanden">DẤU CÔNG VĂN ĐẾN</a></li>
+            <li><a href="https://khacdauquakha.com/#daulogo">DẤU LOGO</a></li>
+            <li><a href="https://khacdauquakha.com/#dauchuky">DẤU CHỮ KÝ</a></li>
+            <li><a href="https://khacdauquakha.com/#dauhoancong">DẤU HOÀN CÔNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautichdiem">DẤU TÍCH ĐIỂM</a></li>
+            <li><a href="https://khacdauquakha.com/#daudongdate">DẤU ĐÓNG DATE</a></li>
+            <li><a href="https://khacdauquakha.com/#dauvanphong">DẤU VĂN PHÒNG</a></li>
+            <li><a href="https://khacdauquakha.com/#dautampon">DẤU CÁN (Chấm mực Tampon)</a></li>
+            <li><a href="https://khacdauquakha.com/#banghieuctyhkd">BẢNG HIỆU CÔNG TY - HỘ KINH DOANH</a></li>
+            <li><a href="https://khacdauquakha.com/#hopmuc">HỘP MỰC LĂN TAY</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h6>Hỗ Trợ</h6>
+          <h5>Hỗ Trợ</h5>
           <ul class="list-unstyled small">
-            <li>Chính Sách Bảo Hành</li>
-            <li>Chính Sách giao hàng</li>
-          </ul>
+            <li><a href="#chinhsachbaohanh">Chính Sách Bảo Hành</a></li>
+            <li><a href="#chinhsachgiaohang">Chính Sách giao hàng</a></li>
+          </ul> 
         </div>
         <div class="col-md-3">
-          <h6>Liên Hệ</h6>
-          <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>123 Đường ABC, Nha Trang</p>
-          <p class="small mb-1"><i class="fa fa-phone me-2"></i>0123.456.789</p>
-          <p class="small mb-1"><i class="fa fa-envelope me-2"></i>contact@khacdau.vn</p>
-          <p class="small mb-1"><i class="fab fa-facebook me-2"></i>fb.com/khacdau.official</p>
-          <p class="small mb-1"><i class="fas fa-comment-dots me-2"></i>Zalo: 0123.456.789</p>
+          <h5>Liên Hệ</h5>
+          <p class="small mb-1"><i class="fa fa-map-marker-alt me-2"></i>38 Thái Nguyên, Phường Tây Nha Trang, Tỉnh
+            Khánh Hòa, Việt Nam</p>
+          <p class="small mb-1"><i class="fa fa-phone me-2"></i>0935805165</p>
+          <p class="small mb-1"><i class="fa fa-envelope me-2"></i>quakhanhatrang@gmail.com</p>
+          <p class="small mb-1"><i class="fas fa-comment-dots me-2"></i>Zalo: 0935805165</p>
         </div>
       </div>
-      <div class="text-center pt-4 small">&copy; 2025 Khắc Dấu Ấn. Tất cả quyền được bảo lưu.</div>
+      <div class="text-center pt-4 small">&copy; 2025 Khắc Dấu Qua Kha. Tất cả quyền được bảo lưu.</div>
     </div>
   </footer>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script mở modal -->
+  <script>
+    function openImageModal(imageSrc) {
+      document.getElementById("modalImage").src = imageSrc;
+      $('#imageModal').modal('show');
+    }
+    function toggleDropdown(e) {
+      e.preventDefault();
+      const parent = e.target.closest('.nav-item');
+
+      if (!parent) return; // <-- nếu không có nav-item, thoát
+
+      // Ẩn các dropdown khác
+      document.querySelectorAll('.nav-item').forEach(item => {
+        if (item !== parent) item.classList.remove('show');
+      });
+
+      // Toggle dropdown hiện tại
+      parent.classList.toggle('show');
+    }
+
+    // Tắt dropdown khi click ra ngoài
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('show'));
+        }
+      });
+      // Lắng nghe tất cả các click trên menu chính
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        // Bỏ active khỏi toàn bộ nav-link
+        document.querySelectorAll('.navbar .nav-link').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Gán active cho link hiện tại
+        this.classList.add('active');
+      });
+    });
+
+    // Lắng nghe thêm các click vào dropdown-item để active luôn menu cha
+    document.querySelectorAll('.custom-dropdown a').forEach(dropItem => {
+      dropItem.addEventListener('click', function () {
+        // Bỏ active khỏi toàn bộ nav-link
+        document.querySelectorAll('.navbar .nav-link').forEach(el => {
+          el.classList.remove('active');
+        });
+
+        // Tìm phần tử cha .nav-item → .nav-link để active menu dropdown
+        const parentDropdown = this.closest('.nav-item').querySelector('.nav-link');
+        if (parentDropdown) {
+          parentDropdown.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
